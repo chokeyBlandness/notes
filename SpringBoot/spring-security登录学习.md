@@ -20,7 +20,7 @@ SpringSecurity采用的是责任链的设计模式，它有一条很长的过滤
 
 流程图如下
 
-![spring-security登录流程示意图](C:\Users\cqk\Desktop\notes\pictures\spring-security登录流程示意图.jpg)
+![spring-security登录流程示意图](https://github.com/chokeyBlandness/notes/tree/main/pictures/spring-security登录流程示意图.jpg)
 
 AuthenticationEntryPoint：解决匿名用户访问无权限资源时的异常
 
