@@ -1,6 +1,6 @@
 # SecureRandom类序列化问题
 
-**SecureRandom cannot be serialized, even though it implements Serializab**
+**SecureRandom cannot be serialized, even though it implements Serializable**
 
 ### Description
 
