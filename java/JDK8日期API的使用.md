@@ -1,6 +1,6 @@
 # JDK8日期API的使用
 
-#### 老版日期API的弊端：
+### 老版日期API的弊端：
 
 java面世之初，引入java.util.Date和java.util.Calendar这两个类处理时间。但现在其中很多的方法很早之前就都已被废弃，且存在很多的问题。
 
@@ -10,7 +10,7 @@ java面世之初，引入java.util.Date和java.util.Calendar这两个类处理�
 
 3、使用规范问题。在Date和Calendar类之前，枚举类（ENUM）还没有出现，所以在字段中使用整数常量导致整数常量都是可变的，且存在魔法数字的情况，不是线程安全的。
 
-#### 新版日期API的使用
+### 新版日期API的使用
 
 常用类的概述与功能介绍
 
@@ -35,3 +35,23 @@ of方法：根据给定的参数生成对应的日期/时间对象，基本上�
 plus方法：根据现有时间对象进行日期的增加，并返回一个新的日期对象。
 
 with方法：直接修改日期。
+
+### Date和LocalDateTime互相转化
+
+```java
+public class DateTimeExchangeUtil {
+
+    public static LocalDateTime parseToLocalDateTime(Date date) {
+        // 方法一
+        return date.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
+        // 方法二
+        // LocalDateTime.ofInstant(date.toInstant(), ZoneId.systemDefault());
+    }
+
+    public static Date parseToDate(LocalDateTime localDateTime) {
+        return Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
+    }
+
+}
+```
+
