@@ -1,4 +1,8 @@
-# spring中bean初始化和销毁的执行顺序
+# spring中bean的生命周期
+
+bean生命周期
+
+![](..\pictures\bean的生命周期.png)
 
 通过代码直接测试bean初始化和销毁的执行顺序。spring版本为5.2.5.RELEASE。
 
